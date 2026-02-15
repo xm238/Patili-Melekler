@@ -53,8 +53,8 @@ body.rtl .header-inner {
   direction: ltr;
 }
 
-body.rtl .site-nav {
-  direction: rtl;
+body.rtl .site-nav a {
+  text-align: right;
 }
 
 img {
@@ -154,7 +154,7 @@ a {
   z-index: 80;
   padding-top: 0;
   background: transparent;
-  transition: padding-top 0.28s ease;
+  transition: padding-top 0.58s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .header-inner {
@@ -167,18 +167,19 @@ a {
   border-radius: 0;
   background: rgba(246, 251, 255, 0.86);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transition:
-    min-height 0.28s ease,
-    border-radius 0.28s ease,
-    box-shadow 0.28s ease,
-    transform 0.28s ease,
-    background-color 0.28s ease,
-    border-color 0.28s ease,
-    padding-inline 0.28s ease;
+    min-height 0.58s cubic-bezier(0.22, 1, 0.36, 1),
+    border-radius 0.58s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.58s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.58s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.58s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.58s cubic-bezier(0.22, 1, 0.36, 1),
+    padding-inline 0.58s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .site-header.scrolled {
-  padding-top: 0.48rem;
+  padding-top: 0.56rem;
 }
 
 .site-header.scrolled .header-inner {
@@ -198,6 +199,7 @@ a {
   font-weight: 800;
   font-size: 0.95rem;
   color: #073140;
+  flex-shrink: 0;
 }
 
 .brand-logo-container {
@@ -211,12 +213,15 @@ a {
   align-items: center;
   justify-content: center;
   padding: 0.32rem;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .brand img {
   width: 100%;
+  height: 100%;
   max-width: 100%;
-  height: auto;
+  object-fit: contain;
 }
 
 .brand-text {
@@ -261,6 +266,8 @@ a {
   background: rgba(255, 255, 255, 0.92);
   box-shadow: 0 8px 16px rgba(13, 31, 45, 0.08);
   overflow: hidden;
+  direction: ltr;
+  unicode-bidi: isolate;
 }
 
 .lang-indicator {
@@ -288,6 +295,7 @@ a {
   border-radius: 999px;
   cursor: pointer;
   white-space: nowrap;
+  min-width: 0;
   transition: color 0.24s ease, transform 0.24s ease;
 }
 
@@ -904,11 +912,24 @@ a {
 }
 
 @media (max-width: 760px) {
+  .site-header .container {
+    width: 100%;
+    max-width: none;
+    padding-inline: 0;
+    transition: padding-inline 0.58s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .site-header.scrolled .container {
+    padding-inline: 0.62rem;
+  }
+
   .header-inner {
     min-height: 92px;
     position: relative;
     justify-content: flex-end;
-    padding-inline: 0.7rem;
+    padding-inline: 0.72rem;
+    border-left-width: 0;
+    border-right-width: 0;
   }
 
   .header-actions {
@@ -996,7 +1017,9 @@ a {
 
   .site-header.scrolled .header-inner {
     min-height: 80px;
-    padding-inline: 0.58rem;
+    padding-inline: 0.62rem;
+    border-left-width: 1px;
+    border-right-width: 1px;
   }
 
   .site-header.scrolled .brand-logo-container {
