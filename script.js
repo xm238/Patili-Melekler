@@ -1,7 +1,6 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('.site-nav');
 const navLinks = document.querySelectorAll('.site-nav a');
-const siteHeader = document.querySelector('.site-header');
 const langSwitchers = document.querySelectorAll('[data-lang-switcher]');
 const langButtons = document.querySelectorAll('.lang-btn');
 const metaDescription = document.getElementById('meta-description');
@@ -378,28 +377,6 @@ langButtons.forEach((button) => {
 
 const initialLang = loadLang();
 setLanguage(LANGS.includes(initialLang) ? initialLang : 'tr', false);
-
-const syncHeaderScrollState = () => {
-  if (!siteHeader) return;
-  siteHeader.classList.toggle('scrolled', window.scrollY > 6);
-};
-
-syncHeaderScrollState();
-
-let headerTicking = false;
-window.addEventListener(
-  'scroll',
-  () => {
-    if (headerTicking) return;
-    headerTicking = true;
-
-    window.requestAnimationFrame(() => {
-      syncHeaderScrollState();
-      headerTicking = false;
-    });
-  },
-  { passive: true }
-);
 
 if (menuToggle && siteNav) {
   menuToggle.addEventListener('click', () => {

@@ -152,22 +152,25 @@ a {
   position: sticky;
   top: 0;
   z-index: 80;
-  padding-top: 0;
+  padding-top: 0.56rem;
   background: transparent;
   transition: padding-top 0.58s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .header-inner {
-  min-height: 78px;
+  min-height: 68px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  border: 1px solid rgba(4, 166, 195, 0.12);
-  border-radius: 0;
-  background: rgba(246, 251, 255, 0.86);
+  border: 1px solid rgba(4, 166, 195, 0.28);
+  border-radius: 999px;
+  background: rgba(248, 253, 255, 0.95);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 14px 26px rgba(13, 31, 45, 0.14);
+  transform: translateY(-1px);
+  padding-inline: 0.9rem;
   transition:
     min-height 0.58s cubic-bezier(0.22, 1, 0.36, 1),
     border-radius 0.58s cubic-bezier(0.22, 1, 0.36, 1),
@@ -176,20 +179,6 @@ a {
     background-color 0.58s cubic-bezier(0.22, 1, 0.36, 1),
     border-color 0.58s cubic-bezier(0.22, 1, 0.36, 1),
     padding-inline 0.58s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.site-header.scrolled {
-  padding-top: 0.56rem;
-}
-
-.site-header.scrolled .header-inner {
-  min-height: 68px;
-  border-radius: 999px;
-  border-color: rgba(4, 166, 195, 0.28);
-  background: rgba(248, 253, 255, 0.95);
-  box-shadow: 0 14px 26px rgba(13, 31, 45, 0.14);
-  transform: translateY(-1px);
-  padding-inline: 0.9rem;
 }
 
 .brand {
@@ -915,21 +904,17 @@ a {
   .site-header .container {
     width: 100%;
     max-width: none;
-    padding-inline: 0;
+    padding-inline: 0.62rem;
     transition: padding-inline 0.58s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .site-header.scrolled .container {
-    padding-inline: 0.62rem;
-  }
-
   .header-inner {
-    min-height: 92px;
+    min-height: 80px;
     position: relative;
     justify-content: flex-end;
-    padding-inline: 0.72rem;
-    border-left-width: 0;
-    border-right-width: 0;
+    padding-inline: 0.62rem;
+    border-left-width: 1px;
+    border-right-width: 1px;
   }
 
   .header-actions {
@@ -945,8 +930,8 @@ a {
   }
 
   .brand-logo-container {
-    width: 136px;
-    height: 84px;
+    width: 120px;
+    height: 74px;
     border-radius: 16px;
     box-shadow: 0 10px 20px rgba(13, 31, 45, 0.1);
   }
@@ -966,7 +951,7 @@ a {
 
   .site-nav {
     position: fixed;
-    top: 106px;
+    top: 94px;
     right: 4vw;
     left: 4vw;
     border: 1px solid rgba(4, 166, 195, 0.2);
@@ -1009,22 +994,6 @@ a {
 
   .site-nav .btn {
     width: 100%;
-  }
-
-  .site-header.scrolled .site-nav {
-    top: 94px;
-  }
-
-  .site-header.scrolled .header-inner {
-    min-height: 80px;
-    padding-inline: 0.62rem;
-    border-left-width: 1px;
-    border-right-width: 1px;
-  }
-
-  .site-header.scrolled .brand-logo-container {
-    width: 120px;
-    height: 74px;
   }
 
   .hero-copy h1 {
