@@ -1,17 +1,18 @@
 <!doctype html>
-<html lang="tr">
+<html lang="tr" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
+      id="meta-description"
       name="description"
-      content="Patili Melekler Pet Kuafor Beylikduzu: premium pet grooming, spa bakim, stil kesim ve sevgi dolu dokunus."
+      content="Patili Melekler Pet Kuaför Beylikdüzü: premium pet grooming, spa bakım, stil kesim ve sevgi dolu dokunuş."
     />
-    <title>Patili Melekler | Premium Pet Kuafor</title>
+    <title>Patili Melekler | Premium Pet Kuaför</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" href="images/patili-melekler-logo.png" />
@@ -23,25 +24,46 @@
 
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="#home" aria-label="Patili Melekler ana sayfa">
-          <img src="images/patili-melekler-logo.png" alt="Patili Melekler logo" width="122" height="78" />
-          <span>Patili Melekler</span>
+        <a class="brand" href="#home" data-i18n-aria-label="brand.aria">
+          <span id="brand-logo-container" class="brand-logo-container">
+            <img src="images/patili-melekler-logo.png" alt="Patili Melekler logo" width="122" height="78" />
+          </span>
+          <span class="brand-text">Patili Melekler</span>
         </a>
 
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span class="sr-only">Menuyu ac/kapat</span>
-        </button>
+        <div class="header-actions">
+          <nav id="site-nav" class="site-nav" data-i18n-aria-label="nav.aria">
+            <a href="#services" data-i18n="nav.services">Hizmetler</a>
+            <a href="#gallery" data-i18n="nav.gallery">Galeri</a>
+            <a href="#reviews" data-i18n="nav.reviews">Yorumlar</a>
+            <a href="#contact" data-i18n="nav.contact">İletişim</a>
+            <a class="btn btn-primary btn-sm" href="tel:+905424671474" data-i18n="nav.callNow">Hemen Ara</a>
 
-        <nav id="site-nav" class="site-nav" aria-label="Ana menu">
-          <a href="#services">Hizmetler</a>
-          <a href="#gallery">Galeri</a>
-          <a href="#reviews">Yorumlar</a>
-          <a href="#contact">Iletisim</a>
-          <a class="btn btn-primary btn-sm" href="tel:+905424671474">Hemen Ara</a>
-        </nav>
+            <div class="mobile-lang-group">
+              <p class="mobile-lang-label" data-i18n="lang.mobileLabel">Dil</p>
+              <div class="lang-switch mobile-lang-switch" data-lang-switcher="mobile" role="group" aria-label="Language switcher">
+                <span class="lang-indicator" aria-hidden="true"></span>
+                <button class="lang-btn is-active" type="button" data-lang="tr">TR</button>
+                <button class="lang-btn" type="button" data-lang="en">EN</button>
+                <button class="lang-btn" type="button" data-lang="ar">عربي</button>
+              </div>
+            </div>
+          </nav>
+
+          <div class="lang-switch desktop-lang-switch" data-lang-switcher="desktop" role="group" aria-label="Language switcher">
+            <span class="lang-indicator" aria-hidden="true"></span>
+            <button class="lang-btn is-active" type="button" data-lang="tr">TR</button>
+            <button class="lang-btn" type="button" data-lang="en">EN</button>
+            <button class="lang-btn" type="button" data-lang="ar">عربي</button>
+          </div>
+        </div>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-i18n-aria-label="menu.aria">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only" data-i18n="menu.toggleText">Menüyü aç/kapat</span>
+        </button>
       </div>
     </header>
 
@@ -49,44 +71,39 @@
       <section id="home" class="hero section">
         <div class="container hero-wrap">
           <div class="hero-copy reveal">
-            <p class="eyebrow">Beylikduzu, Istanbul</p>
+            <p class="eyebrow" data-i18n="hero.eyebrow">Beylikdüzü, İstanbul</p>
             <h1>
-              Patili Dostlariniz Icin
-              <span>Premium Bakim + Stil</span>
+              <span data-i18n="hero.titleTop">Patili Dostlarınız İçin</span>
+              <span data-i18n="hero.titleBottom">Premium Bakım + Stil</span>
             </h1>
-            <p class="lead">
-              Patili Melekler, hijyenik bakim alani ve sevecen ekibiyle dostunuzu sadece temizlemez, karakterine
-              uygun bir stil kazandirir. Hizli randevu, net iletisim, mutlu patiler.
+            <p class="lead" data-i18n="hero.lead">
+              Patili Melekler, hijyenik bakım alanı ve sevecen ekibiyle dostunuzu sadece temizlemez, karakterine uygun
+              bir stil kazandırır. Hızlı randevu, net iletişim, mutlu patiler.
             </p>
             <div class="cta-row">
-              <a class="btn btn-primary" href="tel:+905424671474">Telefonla Randevu</a>
-              <a
-                class="btn btn-ghost"
-                href="https://www.instagram.com/ppatili.meleklerr"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a class="btn btn-primary" href="tel:+905424671474" data-i18n="hero.ctaPhone">Telefonla Randevu</a>
+              <a class="btn btn-ghost" href="https://www.instagram.com/ppatili.meleklerr" target="_blank" rel="noreferrer" data-i18n="hero.ctaInstagram">
                 Instagram DM
               </a>
             </div>
             <ul class="trust-list" role="list">
-              <li><strong>4.9 / 5</strong> Google puani</li>
-              <li><strong>126+</strong> yorum</li>
-              <li><strong>22:00</strong> kapanis saati</li>
+              <li><strong>4.9 / 5</strong> <span data-i18n="hero.trustScore">Google puanı</span></li>
+              <li><strong>126+</strong> <span data-i18n="hero.trustReviews">yorum</span></li>
+              <li><strong>22:00</strong> <span data-i18n="hero.trustHours">kapanış saati</span></li>
             </ul>
           </div>
 
           <div class="hero-visual reveal">
             <figure class="hero-main">
-              <img src="images/hero-doodle-smile.png" alt="Bakim sonrasi mutlu beyaz kopek" loading="eager" />
+              <img src="images/hero-doodle-smile.png" alt="Bakım sonrası mutlu beyaz köpek" loading="eager" />
             </figure>
             <figure class="hero-float hero-float-a">
-              <img src="images/hero-doodle-swing.png" alt="Patili Melekler studyo alaninda kopek" loading="lazy" />
+              <img src="images/hero-doodle-swing.png" alt="Patili Melekler stüdyo alanında köpek" loading="lazy" />
             </figure>
             <figure class="hero-float hero-float-b">
-              <img src="images/pomeranian-groom-finish.png" alt="Bakim masasi ustunde pomeranian" loading="lazy" />
+              <img src="images/pomeranian-groom-finish.png" alt="Bakım masası üstünde pomeranian" loading="lazy" />
             </figure>
-            <div class="hero-pill">Ayni Gun Icinde Randevu Icin Ara</div>
+            <div class="hero-pill" data-i18n="hero.pill">Aynı Gün İçinde Randevu İçin Ara</div>
           </div>
         </div>
       </section>
@@ -95,19 +112,19 @@
         <div class="container proof-grid reveal">
           <article class="proof-card">
             <p class="proof-value">4.9/5</p>
-            <p class="proof-label">Google Ortalamasi</p>
+            <p class="proof-label" data-i18n="proof.rating">Google Ortalaması</p>
           </article>
           <article class="proof-card">
             <p class="proof-value">126+</p>
-            <p class="proof-label">Musteri Yorumu</p>
+            <p class="proof-label" data-i18n="proof.reviews">Müşteri Yorumu</p>
           </article>
           <article class="proof-card">
-            <p class="proof-value">Pet Shop</p>
-            <p class="proof-label">Urun & Aksesuar</p>
+            <p class="proof-value" data-i18n="proof.shopValue">Pet Shop</p>
+            <p class="proof-label" data-i18n="proof.shopLabel">Ürün & Aksesuar</p>
           </article>
           <article class="proof-card">
-            <p class="proof-value">Beylikduzu</p>
-            <p class="proof-label">Yakuplu Lokasyon</p>
+            <p class="proof-value" data-i18n="proof.locationValue">Beylikdüzü</p>
+            <p class="proof-label" data-i18n="proof.locationLabel">Yakuplu Lokasyon</p>
           </article>
         </div>
       </section>
@@ -115,43 +132,42 @@
       <section id="services" class="section">
         <div class="container">
           <div class="section-head reveal">
-            <p class="eyebrow">Hizmetler</p>
-            <h2>Standart Tirastan Premium Spa Paketine</h2>
-            <p>
-              Tum surec, tuy yapisina ve karaktere gore planlanir. Asiri stres yaratmadan, guvenli ekipman ve sabirla
-              calisilir.
+            <p class="eyebrow" data-i18n="services.eyebrow">Hizmetler</p>
+            <h2 data-i18n="services.title">Standart Tıraştan Premium Spa Paketine</h2>
+            <p data-i18n="services.desc">
+              Tüm süreç, tüy yapısına ve karaktere göre planlanır. Aşırı stres yaratmadan, güvenli ekipman ve sabırla çalışılır.
             </p>
           </div>
 
           <div class="service-grid">
             <article class="service-card reveal">
-              <h3>Full Grooming</h3>
-              <p>Kurutma, tuy acma, vucut/surat kesimi, pati bakimi, kulak-temizlik adimlari.</p>
+              <h3 data-i18n="services.card1.title">Full Grooming</h3>
+              <p data-i18n="services.card1.desc">Kurutma, tüy açma, vücut/surat kesimi, pati bakımı, kulak-temizlik adımları.</p>
               <ul>
-                <li>Irka gore kesim plani</li>
-                <li>Temiz ve duzenli gorunum</li>
-                <li>Konfor odakli surec</li>
+                <li data-i18n="services.card1.li1">Irka göre kesim planı</li>
+                <li data-i18n="services.card1.li2">Temiz ve düzenli görünüm</li>
+                <li data-i18n="services.card1.li3">Konfor odaklı süreç</li>
               </ul>
             </article>
 
             <article class="service-card reveal featured">
-              <span class="featured-tag">En Cok Tercih Edilen</span>
-              <h3>Royal Spa Care</h3>
-              <p>Hassas ciltlere uygun banyo, kurutma, detoks dokunus ve luks son dokunus.</p>
+              <span class="featured-tag" data-i18n="services.featured">En Çok Tercih Edilen</span>
+              <h3 data-i18n="services.card2.title">Royal Spa Care</h3>
+              <p data-i18n="services.card2.desc">Hassas ciltlere uygun banyo, kurutma, detoks dokunuş ve lüks son dokunuş.</p>
               <ul>
-                <li>Yumusak, parlak tuy etkisi</li>
-                <li>Koku kontrolu + hijyen</li>
-                <li>Fotojenik final</li>
+                <li data-i18n="services.card2.li1">Yumuşak, parlak tüy etkisi</li>
+                <li data-i18n="services.card2.li2">Koku kontrolü + hijyen</li>
+                <li data-i18n="services.card2.li3">Fotojenik final</li>
               </ul>
             </article>
 
             <article class="service-card reveal">
-              <h3>Style Touch</h3>
-              <p>Renkli kulak/tail dokunuslari, minik stil aksesuarlari ve trend gorunumler.</p>
+              <h3 data-i18n="services.card3.title">Style Touch</h3>
+              <p data-i18n="services.card3.desc">Renkli kulak/tail dokunuşları, minik stil aksesuarları ve trend görünümler.</p>
               <ul>
-                <li>Instagram-ready gorunus</li>
-                <li>Guvenli boya secenekleri</li>
-                <li>Kisa sureli deneme stilleri</li>
+                <li data-i18n="services.card3.li1">Instagram-ready görünüş</li>
+                <li data-i18n="services.card3.li2">Güvenli boya seçenekleri</li>
+                <li data-i18n="services.card3.li3">Kısa süreli deneme stilleri</li>
               </ul>
             </article>
           </div>
@@ -161,32 +177,32 @@
       <section id="gallery" class="section section-soft">
         <div class="container">
           <div class="section-head reveal">
-            <p class="eyebrow">Galeri</p>
-            <h2>Patili Melekler Dokunusu</h2>
-            <p>Secili cekimler: gercek musteri petleri, gercek sonuclar.</p>
+            <p class="eyebrow" data-i18n="gallery.eyebrow">Galeri</p>
+            <h2 data-i18n="gallery.title">Patili Melekler Dokunuşu</h2>
+            <p data-i18n="gallery.desc">Seçili çekimler: gerçek müşteri petleri, gerçek sonuçlar.</p>
           </div>
 
           <div class="gallery-grid reveal">
             <figure class="gallery-item">
-              <img src="images/spa-goggles-lab.png" alt="Banyo alaninda mavi gozluklu kopek" loading="lazy" />
+              <img src="images/spa-goggles-lab.png" alt="Banyo alanında mavi gözlüklü köpek" loading="lazy" />
             </figure>
             <figure class="gallery-item">
-              <img src="images/german-shepherd-groom.png" alt="Tiras sonrasi Alman kurdu" loading="lazy" />
+              <img src="images/german-shepherd-groom.png" alt="Tıraş sonrası Alman kurdu" loading="lazy" />
             </figure>
             <figure class="gallery-item">
-              <img src="images/pink-style-pomeranian.png" alt="Pembe stil dokunuslu pomeranian" loading="lazy" />
+              <img src="images/pink-style-pomeranian.png" alt="Pembe stil dokunuşlu pomeranian" loading="lazy" />
             </figure>
             <figure class="gallery-item">
               <img src="images/bichon-home-aftercare.png" alt="Evde mutlu bichon" loading="lazy" />
             </figure>
             <figure class="gallery-item">
-              <img src="images/bichon-couch-trim.png" alt="Bakim sonrasi beyaz kopek portresi" loading="lazy" />
+              <img src="images/bichon-couch-trim.png" alt="Bakım sonrası beyaz köpek portresi" loading="lazy" />
             </figure>
             <figure class="gallery-item">
-              <img src="images/maltese-knit-sweater.png" alt="Triko kiyafetli minik kopek" loading="lazy" />
+              <img src="images/maltese-knit-sweater.png" alt="Triko kıyafetli minik köpek" loading="lazy" />
             </figure>
             <figure class="gallery-item">
-              <img src="images/boutique-wall.png" alt="Pet shop urun duvari" loading="lazy" />
+              <img src="images/boutique-wall.png" alt="Pet shop ürün duvarı" loading="lazy" />
             </figure>
           </div>
         </div>
@@ -195,27 +211,27 @@
       <section class="section">
         <div class="container pricing-wrap reveal">
           <div class="pricing-copy">
-            <p class="eyebrow">Paketler</p>
-            <h2>Net, Sade, Donusum Odakli Fiyatlama</h2>
-            <p>
-              Irk, tuy uzunlugu ve dugum seviyesine gore fiyat degisebilir. Kesin tutar, kisa bir on gorusme ile netlesir.
+            <p class="eyebrow" data-i18n="pricing.eyebrow">Paketler</p>
+            <h2 data-i18n="pricing.title">Net, Sade, Dönüşüm Odaklı Fiyatlama</h2>
+            <p data-i18n="pricing.desc">
+              Irk, tüy uzunluğu ve düğüm seviyesine göre fiyat değişebilir. Kesin tutar, kısa bir ön görüşme ile netleşir.
             </p>
           </div>
           <div class="pricing-grid">
             <article class="price-card">
-              <h3>Basic Care</h3>
+              <h3 data-i18n="pricing.card1.title">Basic Care</h3>
               <p class="price">TRY 900+</p>
-              <p>Banyo + kurutma + temel tarama</p>
+              <p data-i18n="pricing.card1.desc">Banyo + kurutma + temel tarama</p>
             </article>
             <article class="price-card active">
-              <h3>Full Groom</h3>
+              <h3 data-i18n="pricing.card2.title">Full Groom</h3>
               <p class="price">TRY 1.300+</p>
-              <p>Kesim + banyo + kulak/pati bakimi</p>
+              <p data-i18n="pricing.card2.desc">Kesim + banyo + kulak/pati bakımı</p>
             </article>
             <article class="price-card">
-              <h3>VIP Spa</h3>
+              <h3 data-i18n="pricing.card3.title">VIP Spa</h3>
               <p class="price">TRY 1.800+</p>
-              <p>Full groom + premium spa dokunusu</p>
+              <p data-i18n="pricing.card3.desc">Full groom + premium spa dokunuşu</p>
             </article>
           </div>
         </div>
@@ -224,31 +240,31 @@
       <section id="reviews" class="section section-soft">
         <div class="container">
           <div class="section-head reveal">
-            <p class="eyebrow">Yorumlar</p>
-            <h2>Gercek Deneyimler</h2>
+            <p class="eyebrow" data-i18n="reviews.eyebrow">Yorumlar</p>
+            <h2 data-i18n="reviews.title">Gerçek Deneyimler</h2>
           </div>
 
           <div class="review-grid">
             <article class="review-card reveal">
-              <p>
-                "Ucuncu ziyaretimizdi. Hizmetten cok memnun kaldik. Ekip nazik ve surec profesyonel ilerliyor."
+              <p data-i18n="reviews.card1.text">
+                "Üçüncü ziyaretimizdi. Hizmetten çok memnun kaldık. Ekip nazik ve süreç profesyonel ilerliyor."
               </p>
               <h3>Vani Munian</h3>
-              <span>Google Yorumu</span>
+              <span data-i18n="reviews.card1.meta">Google Yorumu</span>
             </article>
             <article class="review-card reveal">
-              <p>
-                "Maltipoo'muzu duzenli goturuyoruz. Hijyen, ilgi ve sonuc kalitesi cok iyi. Gonul rahatligiyla oneririm."
+              <p data-i18n="reviews.card2.text">
+                "Maltipoo'muzu düzenli götürüyoruz. Hijyen, ilgi ve sonuç kalitesi çok iyi. Gönül rahatlığıyla öneririm."
               </p>
               <h3>Nihal A.</h3>
-              <span>Google Yorumu</span>
+              <span data-i18n="reviews.card2.meta">Google Yorumu</span>
             </article>
             <article class="review-card reveal">
-              <p>
-                "Profesyonel ekip, harika bir sac kesimi. Sonuc bekledigimizden de guzel oldu."
+              <p data-i18n="reviews.card3.text">
+                "Profesyonel ekip, harika bir saç kesimi. Sonuç beklediğimizden de güzel oldu."
               </p>
               <h3>Nun</h3>
-              <span>Local Guide</span>
+              <span data-i18n="reviews.card3.meta">Local Guide</span>
             </article>
           </div>
         </div>
@@ -257,21 +273,19 @@
       <section id="contact" class="section">
         <div class="container contact-grid">
           <div class="contact-copy reveal">
-            <p class="eyebrow">Iletisim</p>
-            <h2>Randevu Icin Ulasin</h2>
+            <p class="eyebrow" data-i18n="contact.eyebrow">İletişim</p>
+            <h2 data-i18n="contact.title">Randevu İçin Ulaşın</h2>
             <ul class="contact-list" role="list">
               <li>
-                <strong>Adres:</strong>
-                Yakuplu, Hurriyet Blv. 38-1 D:28, 34524 Beylikduzu / Istanbul
+                <strong data-i18n="contact.addressLabel">Adres:</strong>
+                <span data-i18n="contact.addressValue">Yakuplu, Hürriyet Blv. 38-1 D:28, 34524 Beylikdüzü / İstanbul</span>
               </li>
-              <li><strong>Telefon:</strong> <a href="tel:+905424671474">0542 467 14 74</a></li>
+              <li><strong data-i18n="contact.phoneLabel">Telefon:</strong> <a href="tel:+905424671474">0542 467 14 74</a></li>
               <li>
-                <strong>Instagram:</strong>
-                <a href="https://www.instagram.com/ppatili.meleklerr" target="_blank" rel="noreferrer">
-                  @ppatili.meleklerr
-                </a>
+                <strong data-i18n="contact.instagramLabel">Instagram:</strong>
+                <a href="https://www.instagram.com/ppatili.meleklerr" target="_blank" rel="noreferrer">@ppatili.meleklerr</a>
               </li>
-              <li><strong>Calisma:</strong> Her gun acik, kapanis 22:00</li>
+              <li><strong data-i18n="contact.hoursLabel">Çalışma:</strong> <span data-i18n="contact.hoursValue">Her gün açık, kapanış 22:00</span></li>
             </ul>
             <div class="contact-actions">
               <a
@@ -279,6 +293,7 @@
                 href="https://maps.google.com/?q=Yakuplu,+Hurriyet+Blv.+38-1+D:28,+34524+Beylikduzu%2FIstanbul"
                 target="_blank"
                 rel="noreferrer"
+                data-i18n="contact.mapCta"
               >
                 Yol Tarifi
               </a>
@@ -286,28 +301,28 @@
           </div>
 
           <form class="contact-form reveal" id="lead-form" novalidate>
-            <h3>Hizli Randevu Formu</h3>
-            <p>Not: Bu form su an UI placeholder olarak baglandi.</p>
+            <h3 data-i18n="form.title">Hızlı Randevu Formu</h3>
+            <p data-i18n="form.note">Not: Bu form şu an UI placeholder olarak bağlı.</p>
 
-            <label for="name">Ad Soyad</label>
+            <label for="name" data-i18n="form.nameLabel">Ad Soyad</label>
             <input id="name" name="name" type="text" required />
 
-            <label for="pet">Pet Turu</label>
-            <input id="pet" name="pet" type="text" placeholder="Orn: Pomeranian" required />
+            <label for="pet" data-i18n="form.petLabel">Pet Türü</label>
+            <input id="pet" name="pet" type="text" data-i18n-placeholder="form.petPlaceholder" placeholder="Örn: Pomeranian" required />
 
-            <label for="service">Hizmet</label>
+            <label for="service" data-i18n="form.serviceLabel">Hizmet</label>
             <select id="service" name="service" required>
-              <option value="">Seciniz</option>
-              <option>Basic Care</option>
-              <option>Full Groom</option>
-              <option>VIP Spa</option>
-              <option>Style Touch</option>
+              <option value="" data-i18n="form.selectDefault">Seçiniz</option>
+              <option data-i18n="form.option1">Basic Care</option>
+              <option data-i18n="form.option2">Full Groom</option>
+              <option data-i18n="form.option3">VIP Spa</option>
+              <option data-i18n="form.option4">Style Touch</option>
             </select>
 
-            <label for="message">Ek Not</label>
-            <textarea id="message" name="message" rows="3" placeholder="Saat tercihi, hassasiyet vb."></textarea>
+            <label for="message" data-i18n="form.messageLabel">Ek Not</label>
+            <textarea id="message" name="message" rows="3" data-i18n-placeholder="form.notePlaceholder" placeholder="Saat tercihi, hassasiyet vb."></textarea>
 
-            <button class="btn btn-primary" type="submit">Talep Gonder</button>
+            <button class="btn btn-primary" type="submit" data-i18n="form.submit">Talep Gönder</button>
           </form>
         </div>
       </section>
@@ -315,8 +330,11 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>(c) <span id="year"></span> Patili Melekler. Tum haklari saklidir.</p>
-        <a href="https://www.instagram.com/ppatili.meleklerr" target="_blank" rel="noreferrer">Instagram</a>
+        <p>
+          <span>(c) <span id="year"></span> </span>
+          <span data-i18n="footer.copy">Patili Melekler. Tüm hakları saklıdır.</span>
+        </p>
+        <a href="https://www.instagram.com/ppatili.meleklerr" target="_blank" rel="noreferrer" data-i18n="footer.instagram">Instagram</a>
       </div>
     </footer>
 
