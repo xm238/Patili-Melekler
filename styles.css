@@ -927,22 +927,30 @@ a {
     transform: translateX(-50%);
     z-index: 3;
     margin: 0;
+    gap: 0.42rem;
+    max-width: calc(100% - 138px);
   }
 
   .brand-logo-container {
-    width: 120px;
-    height: 74px;
-    border-radius: 16px;
-    box-shadow: 0 10px 20px rgba(13, 31, 45, 0.1);
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    padding: 0.2rem;
+    box-shadow: 0 7px 14px rgba(13, 31, 45, 0.08);
   }
 
   .brand-text {
-    display: none;
+    display: block;
+    font-size: 0.96rem;
+    line-height: 1.05;
+    color: #073140;
+    white-space: nowrap;
   }
 
   .menu-toggle {
     display: inline-flex;
     z-index: 4;
+    margin-right: 0.3rem;
   }
 
   .desktop-lang-switch {
